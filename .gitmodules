@@ -19,3 +19,6 @@
 [submodule "vendor-local/metlog-py"]
 	path = vendor-local/metlog-py
 	url = git://github.com/mozilla-services/metlog-py.git
+[submodule "vendor-local/metlog-cef"]
+	path = vendor-local/metlog-cef
+	url = git://github.com/mozilla-services/metlog-cef.git
