@@ -1,9 +1,11 @@
 # This is an example settings/local.py file.
 # These settings overrides what's in settings/base.py
 
+from . import base
 # To extend any settings from settings/base.py here's an example:
-#from . import base
 #INSTALLED_APPS = base.INSTALLED_APPS + ['debug_toolbar']
+
+from metlog.config import client_from_dict_config
 
 DATABASES = {
     'default': {
@@ -80,3 +82,20 @@ SECRET_KEY = ''
 # Common Event Format logging parameters
 #CEF_PRODUCT = 'Playdoh'
 #CEF_VENDOR = 'Mozilla'
+
+## Metlog settings
+
+# METLOG_CONF = {
+#     'logger': 'solitude',
+#     'sender': {
+#         'class': 'metlog.senders.udp.UdpSender',
+#         'host': '127.0.0.1',
+#         'port': 5566,
+#     },
+# }
+
+try:
+    metlog_conf = METLOG_CONF.copy()  # NOQA
+except NameError:
+    metlog_conf = base.METLOG_CONF.copy()
+METLOG = client_from_dict_config(metlog_conf)

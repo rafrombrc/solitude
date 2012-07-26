@@ -82,6 +82,13 @@ LOGGING = {
     },
 }
 
+METLOG_CONF = {
+    'logger': 'solitude',
+    'sender': {
+        'class': 'metlog.senders.logging.StdLibLoggingSender',
+    },
+}
+
 # These are the AES encryption keys for different fields.
 AES_KEYS = {
     'buyerpaypal:key': '',
