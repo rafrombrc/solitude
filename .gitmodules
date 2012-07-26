@@ -16,3 +16,6 @@
 [submodule "vendor-local/simplejson"]
 	path = vendor-local/simplejson
 	url = git://github.com/simplejson/simplejson.git
+[submodule "vendor-local/metlog-py"]
+	path = vendor-local/metlog-py
+	url = https://github.com/mozilla-services/metlog-py.git
