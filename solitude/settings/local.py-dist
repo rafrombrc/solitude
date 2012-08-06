@@ -92,6 +92,9 @@ SECRET_KEY = ''
 #         'host': '127.0.0.1',
 #         'port': 5566,
 #     },
+#     'plugins': {
+#         'cef': ('metlog_cef.cef_plugin.config_plugin', dict()),
+#     },
 # }
 
 try:

@@ -87,6 +87,9 @@ METLOG_CONF = {
     'sender': {
         'class': 'metlog.senders.logging.StdLibLoggingSender',
     },
+    'plugins': {
+        'cef': ('metlog_cef.cef_plugin.config_plugin', dict()),
+    },
 }
 
 # These are the AES encryption keys for different fields.
